@@ -70,6 +70,7 @@ def sync(pathname, bucket):
     """Sync contents of PATHNAME to BUCKET."""
     # s3_bucket = bucket_manager.s3.Bucket(bucket)
     bucket_manager.sync(pathname, bucket)
+    print(bucket_manager.get_bucket_url(bucket_manager.s3.Bucket(bucket)))
 
 # a single file in python is treated as module But
 # if you want to run it as a script give __name__ == '__main__'
